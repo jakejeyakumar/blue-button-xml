@@ -1,6 +1,6 @@
 "use strict";
-var DOMParser = require('xmldom').DOMParser;
-var xmldom = require('xmldom');
+var DOMParser = require('@xmldom/xmldom').DOMParser;
+var xmldom = require('@xmldom/xmldom');
 var xpath = require('xpath');
 var Resolver = require('xpath').NodeXPathNSResolver;
 

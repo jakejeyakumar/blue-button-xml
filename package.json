@@ -29,6 +29,7 @@
     "node": ">= 14.19.2"
   },
   "dependencies": {
+    "@xmldom/xmldom": "^0.8.2",
     "libxmljs": "^0.19.10",
     "lodash": "^4.17.21",
     "moment": "^2.29.3",
