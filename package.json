@@ -1,5 +1,5 @@
 {
-  "name": "@amida-tech/blue-button-xml",
+  "name": "@jakejeyakumar/blue-button-xml",
   "version": "1.8.4",
   "description": "Blue Button XML Parsing Infrastructure",
   "main": "./index.js",
@@ -8,32 +8,21 @@
   },
   "directories": {
     "doc": "docs",
-    "lib": "lib"
+    "lib": "lib",
+    "test": "test"
   },
   "scripts": {
     "test": "grunt"
   },
   "author": "Dmitry Kachaev <dmitry@amida-tech.com>",
-  "contributors": [{
-      "name": "Matthew McCall",
-      "email": "matt@amida-tech.com"
-    },
-    {
-      "name": "Afsin Ustundag",
-      "email": "afsin.ustundag@us.pwc.com"
-    },
-    {
-      "name": "Matt Martz",
-      "email": "matt.martz@amida-tech.com"
-    },
-    {
-      "name": "Christopher Best",
-      "email": "bestchris@gmail.com"
-    },
-    {
-      "name": "Marc Sylvestre",
-      "email": "marc.sylvestre@manhydra.com"
-    }
+  "contributors": [
+    "Matthew McCall <matt@amida-tech.com>",
+    "Afsin Ustundag <afsin.ustundag@us.pwc.com>",
+    "Matt Martz <matt.martz@amida-tech.com>",
+    "Christopher Best <bestchris@gmail.com>",
+    "Marc Sylvestre <marc.sylvestre@manhydra.com>",
+    "Dmitry Kachaev <dmitry@amida-tech.com>",
+    "Jake Jeyakumar <consultant@jakejeyakumar.com>"
   ],
   "license": "Apache-2.0",
   "engines": {
@@ -58,7 +47,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/amida-tech/blue-button-xml.git"
+    "url": "git+https://github.com/jakejeyakumar/blue-button-xml.git"
   },
   "keywords": [
     "bluebutton",
@@ -67,7 +56,7 @@
     "parsing"
   ],
   "bugs": {
-    "url": "https://github.com/amida-tech/blue-button-xml/issues"
+    "url": "https://github.com/jakejeyakumar/blue-button-xml/issues"
   },
-  "homepage": "https://github.com/amida-tech/blue-button-xml"
+  "homepage": "https://github.com/jakejeyakumar/blue-button-xml"
 }
