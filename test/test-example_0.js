@@ -7,7 +7,7 @@ var component = require('../index').component;
 var bbxml = require('../index');
 
 var component = bbxml.component;
-var xml = bbxml.xmlUtil;
+var xml = require("../browser/lib/xml"); //bbxml.xmlUtil;
 
 describe('example_0', function () {
   var expected = {

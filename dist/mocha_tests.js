@@ -1,5 +1,6 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
+var DOMParser = require('xmldom');
 
 exports.parse = function (src) {
     var xml;
@@ -351,7 +352,7 @@ var util = require("util");
 var common = require("./common");
 var cleanup = require("./cleanup");
 var componentInstance = require("./componentInstance");
-var xml = require('./xml');
+var xml = require('../browser/lib/xml');
 
 var Parser = require("./parser");
 var ParserNF = require("./parsernf");
@@ -38572,7 +38573,7 @@ describe('hl7 to/from iso8601 date/time conversion', function () {
 var chai = require('chai');
 
 var bbxml = require('../index');
-var xml = require('../lib/xml');
+var xml = require('../browser/lib/xml');
 
 var expect = chai.expect;
 
@@ -39125,7 +39126,7 @@ var expect = require('chai').expect;
 
 
 var component = require('../index').component;
-var xml = require('../lib/xml');
+var xml = require('../browser/lib/xml');
 
 describe('componentInstance.js', function () {
     it('setJS path with .', function (done) {
@@ -39209,7 +39210,7 @@ var expect = require('chai').expect;
 
 
 var component = require('../index').component;
-var xml = require('../lib/xml');
+var xml = require('../browser/lib/xml');
 
 var testChildComponent = component.define('testChild');
 testChildComponent.fields([
@@ -39272,7 +39273,7 @@ describe('parser.js', function () {
 var chai = require('chai');
 
 var bbxml = require('../index');
-var xml = require('../lib/xml');
+var xml = require('../browser/lib/xml');
 
 var expect = chai.expect;
 
@@ -39416,7 +39417,7 @@ describe('readme', function () {
 var chai = require('chai');
 
 var bbxml = require('../index');
-var xml = require('../lib/xml');
+var xml = require('../browser/lib/xml');
 
 var expect = chai.expect;
 
@@ -39520,7 +39521,7 @@ var path = require('path');
 var chai = require('chai');
 
 var bbxml = require('../index');
-var xml = require('../lib/xml');
+var xml = require('../browser/lib/xml');
 
 var expect = chai.expect;
 

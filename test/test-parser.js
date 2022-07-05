@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 var component = require('../index').component;
-var xml = require('../lib/xml');
+var xml = require('../browser/lib/xml');
 
 var testChildComponent = component.define('testChild');
 testChildComponent.fields([

@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 var component = require('../index').component;
-var xml = require('../lib/xml');
+var xml = require('../browser/lib/xml');
 
 describe('componentInstance.js', function () {
   it('setJS path with .', function (done) {

@@ -1,4 +1,22 @@
 "use strict";
+var DOMParser = require('xmldom').DOMParser;
+var xmldom = require('xmldom');
+var xpath = require('xpath');
+var Resolver = require('xpath').NodeXPathNSResolver;
+
+var XPathResult = {
+  ANY_TYPE: 0,
+  NUMBER_TYPE: 1,
+  STRING_TYPE: 2,
+  BOOLEAN_TYPE: 3,
+  UNORDERED_NODE_ITERATOR_TYPE: 4,
+  ORDERED_NODE_ITERATOR_TYPE: 5,
+  UNORDERED_NODE_SNAPSHOT_TYPE: 6,
+  ORDERED_NODE_SNAPSHOT_TYPE: 7,
+  ANY_UNORDERED_NODE_TYPE: 8,
+  FIRST_ORDERED_NODE_TYPE: 9
+
+};
 
 exports.parse = function (src) {
   var xml;
@@ -60,19 +78,35 @@ exports.xpath = (function () {
 
   return function (doc, p, ns) {
     var r = [];
+
     var a = doc.ownerDocument || doc;
     var b = doc.ownerDocument ? doc : doc.documentElement;
-    var riter = a.evaluate(p, b, function (n) {
-      return (ns || DEFAULT_NS)[n] || null;
-    }, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
-    while (true) {
-      var tmp = riter.iterateNext();
-      if (tmp) {
-        r.push(tmp);
-      } else {
-        break;
-      }
+
+    var result = xpath.evaluate(
+      p, // xpathExpression
+      b, // contextNode
+      xpath.createNSResolver(a), // namespaceResolver
+      xpath.XPathResult.ORDERED_NODE_ITERATOR_TYPE, // resultType
+      null // result
+    );
+
+    var node = result.iterateNext();
+    while (node) {
+      r.push(node);
+      node = result.iterateNext();
     }
+
+    // var riter = a.evaluate(p, b, function (n) {
+    //   return (ns || DEFAULT_NS)[n] || null;
+    // }, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
+    // while (true) {
+    //   var tmp = riter.iterateNext();
+    //   if (tmp) {
+    //     r.push(tmp);
+    //   } else {
+    //     break;
+    //   }
+    // }
     return r;
   };
 })();

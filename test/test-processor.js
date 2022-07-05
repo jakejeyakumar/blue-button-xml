@@ -3,7 +3,7 @@
 var fs = require('fs');
 
 var bbxml = require('../index');
-var xml = require('../lib/xml');
+var xml = require('../browser/lib/xml');
 
 var component = bbxml.component;
 var processor = bbxml.processor;
